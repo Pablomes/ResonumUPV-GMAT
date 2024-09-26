@@ -1,0 +1,30 @@
+function [sol,incr,iter,ACOC] = PuntoFijo(g, x0, tol, maxiter)
+% [sol, incr, iter, ACOC] = PolinomioNewton(xi, fi)
+% Aproxima los puntos calculando el polinomio de Newton
+% PARAMETROS:
+% xi -> lista de coordenadas x
+% fi -> lista de coordenadas y
+
+
+incr = [1];
+iter = 0;
+ACOC = [];
+
+while and(incr(end) > tol, iter < maxiter)
+    x1 = g(x0);
+    % actualizar valores para condición de parada
+    incr = [incr, abs(x1 - x0)];
+    iter = iter + 1;
+    x0 = x1;
+end
+
+if iter>= maxiter
+    sol = 'No ha convergido';
+else
+    sol = x0;
+    incr = incr(:, 2:end);
+    ACOC = fACOC(incr);
+    Tasa(incr);
+end
+
+end

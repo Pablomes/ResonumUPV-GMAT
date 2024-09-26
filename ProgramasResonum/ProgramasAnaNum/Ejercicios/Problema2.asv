@@ -1,0 +1,14 @@
+function [N, p, E] = Problema2(f, n, tol)
+N = 0; E = 1;
+
+while E > tol
+    p = AproximacionLegendrePGorro(f, N);
+    
+    x = linspace(-1, 1, n + 1);
+
+    for i = 1:length(x)
+        e = abs(subs(f))
+
+end
+
+end

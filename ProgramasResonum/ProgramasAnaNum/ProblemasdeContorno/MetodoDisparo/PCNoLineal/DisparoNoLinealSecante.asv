@@ -1,0 +1,12 @@
+function [yk, xk] = DisparoNoLinealSecante(F, a, b, alpha, beta, N, t0, t1, tol, maxiter)
+
+h = (b-a) / N; xk = a:h:b; iter = 0; S = tol + 1;
+
+[Yk, ~ ] = MetodoRK4Sistemas(F, a, b, [alpha; t0], N);      y0 = Yk(1, end);
+[Yk, xk] = MetodoRK4Sistemas(F, a, b, [alpha; t1], N);      y1 = Yk(1, end);
+
+while and(S > tol, iter < maxiter)
+    t2 = t1 - (y1 - beta) * (t1 - t0) / (y1 - y0);
+    [xk, Yk]
+    
+end
