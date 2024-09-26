@@ -6,6 +6,9 @@ function EjecutarEste
 addpath 'Metodos directos resolucion sistemas lineales'\
 
 
+addpath 'Practicas\Practica1\' 
+
+
 % Cosas de ANANUM
 addpath ProgramasAnaNum
 addpath ProgramasAnaNum\AproximacionContinua\FuncionesRacionales\

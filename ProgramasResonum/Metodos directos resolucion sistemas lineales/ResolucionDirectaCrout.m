@@ -1,6 +1,6 @@
 function sol = ResolucionDirectaCrout(diag, lDiag, uDiag, b)
 % sol = ResolucionDirectaCrout(diag, lDiag, uDiag, b)
-% Utiliza la factorizacion de Crout para resolver el sistema Ax = b con
+% Utiliza metodo de Crout para resolver el sistema Ax = b con
 % matriz A tridiagonal
 % PARAMETROS:
 % diag -> diagonal principal de la matriz del sistema
