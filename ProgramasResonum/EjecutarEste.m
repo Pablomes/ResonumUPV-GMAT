@@ -4,7 +4,7 @@ function EjecutarEste
 % vez sin cambiar de carpeta
 
 addpath 'Metodos directos resolucion sistemas lineales'\
-
+addpath 'Metodos iterativos resolucion sistemas lineales'\
 
 addpath 'Practicas\Practica1\' 
 
