@@ -34,6 +34,7 @@ function [sol, incr, iter, ACOC] = GradienteConjugado(A, b, x0, tol, maxiter)
         sol = 'No ha convergido';
     else
         sol = x1;
+        incr = incr(1:iter + 1);
         ACOC = fACOC(incr);
     end
 

@@ -32,6 +32,7 @@ function [sol, incr, iter, ACOC] = GradienteII(A, b, x0, tol, maxiter)
         sol = 'No ha convergido';
     else
         sol = x0;
+        incr = incr(1:iter + 1);
         ACOC = fACOC(incr);
     end
 end
