@@ -7,6 +7,7 @@ addpath 'Metodos directos resolucion sistemas lineales'\
 addpath 'Metodos iterativos resolucion sistemas lineales'\
 
 addpath 'Practicas\Practica1\' 
+addpath Practicas\Practica2\
 
 
 % Cosas de ANANUM
