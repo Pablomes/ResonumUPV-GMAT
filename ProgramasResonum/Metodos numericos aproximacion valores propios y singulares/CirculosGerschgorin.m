@@ -8,6 +8,10 @@ function [D] = CirculosGerschgorin(A)
     n = size(A, 1);
     D = zeros(n, 2);
 
+    hold on
+    axis on
+    xline(0); yline(0);
+
     for i = 1:n
         D(i, 1) = A(i, i);
         sum = 0;
@@ -18,5 +22,8 @@ function [D] = CirculosGerschgorin(A)
         end
 
         D(i, 2) = sum;
+        
+        plot(D(i, 1), 0, 'd')
+        fimplicit(@(x, y) (x - D(i, 1))^2 + y^2 - D(i, 2)^2);
     end
 end
