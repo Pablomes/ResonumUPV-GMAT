@@ -29,7 +29,7 @@ function [sol, incr, iter, ACOC] = SOR1(A, b, x0, w, tol, maxiter)
         end
 
         iter = iter + 1;
-        incr(iter + 1) = max(x1 - x0);%norm(x1 - x0, inf);
+        incr(iter + 1) = norm(x1 - x0);
         x0 = x1;
     end
 

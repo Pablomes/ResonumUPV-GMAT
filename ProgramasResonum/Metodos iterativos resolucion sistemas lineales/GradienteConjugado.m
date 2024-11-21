@@ -26,7 +26,7 @@ function [sol, incr, iter, ACOC] = GradienteConjugado(A, b, x0, tol, maxiter)
         d = r - ((d1' * A * r) / (d1' * A * d1)) * d1;
 
         iter = iter + 1;
-        incr(iter + 1) = sqrt(r' * r);
+        incr(iter + 1) = norm(r, "inf");%norm(xe - Cinv' * x, "inf");%norm(r);%sqrt(r' * r);
         d1 = d; x1 = x; r1 = r;
     end
 
