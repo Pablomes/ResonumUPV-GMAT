@@ -1,5 +1,14 @@
 function [sol, incr, incr2, iter, ACOC] = TraubSist(F, dF, x0, tol, maxiter)
-    
+% [sol, incr, incr2, iter, ACOC] = TraubSist(F, dF, x0, tol, maxiter)
+% Aproxima la solucion F(x) = 0 usando el metodo multipaso de Traub
+% PARAMETROS:
+% F -> Sistema tal que F(x) = 0; Debe ser una funcion anonima.
+% dF -> Jacobiana de F(x). Debe ser una matriz anonima.
+% x0 -> punto de inicio
+% tol -> tolerancia. Detiene ejecucion cuando se alcanza un incremento
+% menor
+% maxiter -> numero de iteraciones tras las que cesa la ejecucion    
+
     x0 = x0(:); [n, ~] = size(x0);
     iter = 0;
     incr = zeros(maxiter + 1, 1); incr(1) = 1;
