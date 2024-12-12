@@ -19,6 +19,6 @@ function [Q, R] = TridiagonalizacionHouseholder(A)
         H = [eye(i), zeros(i, m - i); zeros(m - i, i), h];
 
         R = H * R * H;
-        Q = H * Q;
+        Q = Q * H';
     end
 end

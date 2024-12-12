@@ -11,6 +11,8 @@ addpath 'Métodos iterativos multipunto para resolver sistemas no lineales'\
 
 addpath 'Practicas\Practica1\' 
 addpath Practicas\Practica2\
+addpath Parcial12023\
+addpath RecuParcial12023\
 
 
 % Cosas de ANANUM

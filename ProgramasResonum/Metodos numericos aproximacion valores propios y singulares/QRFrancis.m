@@ -1,5 +1,5 @@
-function [valP, incr, iter, ACOC] = QRHouseholder(A, tol, maxiter)
-% [valP, incr, iter, ACOC] = QRHouseholder(A tol, maxiter)
+function [valP, incr, iter, ACOC] = QRFrancis(A, tol, maxiter)
+% [valP, incr, iter, ACOC] = QRFrancis(A tol, maxiter)
 % Aproxima los valores propios de A
 % PARAMETROS:
 % A -> Matriz A simetrica de la que se quiere sacar los valores propios
@@ -12,7 +12,7 @@ function [valP, incr, iter, ACOC] = QRHouseholder(A, tol, maxiter)
     ACOC = []; n = size(A, 1);
 
     while iter < maxiter && incr(iter + 1) > tol
-        [Q, R2] = TriangulizacionHouseholder(R);
+        [Q, R2] = qr(R);
         R = R2 * Q;
 
         sum = 0;
