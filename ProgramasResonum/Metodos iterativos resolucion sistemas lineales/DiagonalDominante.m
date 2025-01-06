@@ -18,5 +18,7 @@ function DD = DiagonalDominante(A)
         if abs(A(i, i)) < sum
             DD = 0;
         end
+
+        i = i + 1;
     end
 end

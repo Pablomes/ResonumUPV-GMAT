@@ -8,6 +8,7 @@ addpath 'Metodos iterativos resolucion sistemas lineales'\
 addpath 'Metodos numericos aproximacion valores propios y singulares'\
 addpath  'Sistemas de ecuaciones no lineales'\
 addpath 'Métodos iterativos multipunto para resolver sistemas no lineales'\
+addpath 'Integracion Multiple'\
 
 addpath 'Practicas\Practica1\' 
 addpath Practicas\Practica2\
