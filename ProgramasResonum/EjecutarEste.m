@@ -14,6 +14,7 @@ addpath 'Practicas\Practica1\'
 addpath Practicas\Practica2\
 addpath Parcial12023\
 addpath RecuParcial12023\
+addpath Problemas\
 
 
 % Cosas de ANANUM
