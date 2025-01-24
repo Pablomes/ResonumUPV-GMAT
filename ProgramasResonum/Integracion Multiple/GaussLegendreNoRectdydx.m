@@ -19,7 +19,7 @@ function I = GaussLegendreNoRectdydx(F, a, b, cx, dx, n, m)
 
     for i = 1:n
         yk = (cx(xk(i)) + dx(xk(i))) / 2 + ((dx(xk(i)) - cx(xk(i))) / 2) * yNodos;
-
+        
         z = F(xk(i), yk);
         Iy(i) = ((dx(xk(i)) - cx(xk(i))) / 2) * sum(yPesos.*z);
     end
